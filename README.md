@@ -1,0 +1,1 @@
+# praivate_diary
