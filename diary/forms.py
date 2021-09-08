@@ -22,3 +22,4 @@ class InquiryForm(forms.Form):
       self.fields['message'].widget.attrs['placeholder'] = 'メッセージをここに入力してください。'
 
 
+ 
