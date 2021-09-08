@@ -1,11 +1,9 @@
-from typing import Collection
 from django.views import generic
-
 from .forms import InquiryForm
 
 class IndexView(generic.TemplateView):
-    template_name = "index.html"
+    template_name = "diary/index.html"
 
-class InquiryView(generic.FormView):
-    template_name = "inquiry.html"
-    from_class = InquiryForm
+class InquiryViews(generic.FormView):
+    template_name = "diary/inquiry.html"
+    form_class = InquiryForm

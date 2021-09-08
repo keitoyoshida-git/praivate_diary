@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'diary/base.html' %}
 
 {% block title %}お問い合わせ Private Diary{% endblock %}
 
@@ -11,9 +11,9 @@
 
                 {{form.non_field_errors}}
 
-                {% for field in from %}
+                {% for field in form %}
                   <div class="form-group row">
-                      <label for ="{{ field.id_for_lebel}}" class="col-sm-4 col-form-label">
+                      <label for ="{{ field.id_for_lebel }}" class="col-sm-4 col-form-label">
                           <strong>{{ field.label_tag }}</strong>
                       </label>
                       <div class="col-sm-8">
@@ -30,3 +30,4 @@
         </div>
     </div>
 </div>
+{% endblock %}
