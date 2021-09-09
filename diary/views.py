@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 class IndexView(generic.TemplateView):
     template_name = "diary/index.html" 
 
-class InquiryViews(generic.FormView):
+class InquiryView(generic.FormView):
     template_name = "diary/inquiry.html"
     form_class = InquiryForm
     success_url = reverse_lazy('diary:inquiry')
