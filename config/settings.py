@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'diary.apps.DiaryConfig'
+    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
@@ -147,7 +148,7 @@ INSTALLED_APPS = [
     'diary.apps.DiaryConfig',
     'accounts.apps.AccountsConfig',
 
-    'django.contrid.sites',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
 
@@ -162,5 +163,10 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend'
 )
 
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
+
