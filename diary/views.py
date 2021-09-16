@@ -9,7 +9,7 @@ import logging
 from django.urls import reverse_lazy
 
 from django.views import generic
-from .forms import InquiryForm
+from .forms import InquiryForm , DiaryCreateForm
 
 from .models import Diary
 
@@ -40,11 +40,10 @@ class DiaryListView(LoginRequiredMixin,generic.ListView):
         return diaries
 
 
-class DiaryDetailview(LoginRequiredMixin, generic.DetailView):
+class DiaryDetailView(LoginRequiredMixin, generic.DetailView):
     model = Diary
     template_name = 'diary_detail.html'
     pk_url_kwarg = 'id'
-
 
 class DiaryCreateView(LoginRequiredMixin, generic.CreateView):
     model = Diary
