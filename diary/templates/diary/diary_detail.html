@@ -1,4 +1,4 @@
-{% extends  'diary/bese.html' %}
+{% extends  'diary/base.html' %}
 {% load static %}
 
 {% block title %}日記詳細 | Private Diary{% endblock %}
@@ -42,7 +42,7 @@
                 <strong>作成日時</strong>
             </div>
             <div class="col-9">
-                {{% object.created_at %}}
+                {{ object.created_at }}
             </div>
         </div>
         <hr>
